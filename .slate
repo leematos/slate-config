@@ -1,0 +1,17 @@
+config nudgePercentOf screenSize
+
+alias l-1qrt  corner top-left resize:screenSizeX/4;screenSizeY
+alias l-half  corner top-left resize:screenSizeX/2;screenSizeY
+alias l-3qrt  corner top-left resize:screenSizeX*3/4;screenSizeY
+alias l-full  corner top-left resize:screenSizeX;screenSizeY
+
+alias r-1qrt  corner top-right resize:screenSizeX/4;screenSizeY
+alias r-half  corner top-right resize:screenSizeX/2;screenSizeY
+alias r-3qrt  corner top-right resize:screenSizeX*3/4;screenSizeY
+alias r-full  corner top-right resize:screenSizeX;screenSizeY
+
+bind left:cmd,alt  chain ${l-1qrt} | ${l-half} | ${l-3qrt} | ${l-full}
+bind right:cmd,alt  chain ${r-1qrt} | ${r-half} | ${r-3qrt} | ${r-full}
+
+bind right:ctrl,alt,cmd nudge +25% +0
+bind left:ctrl,alt,cmd nudge -25% +0
